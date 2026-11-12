@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ondea Commandes · Soutenance front-end</title>
+  <meta name="description" content="Diaporama de soutenance de la partie front-end d'Ondea Commandes, MODE 83, promotion 2027.">
+  <style>
+    :root { --nuit:#0d1220; --obsidienne:#161d2f; --or:#d9b25f; --ivoire:#f4efe4; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--nuit); color:var(--ivoire);
+           font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    header { max-width:1200px; margin:0 auto; padding:24px 20px 12px;
+             display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; }
+    h1 { margin:0; font-family: Georgia, "Times New Roman", serif; font-size:1.6rem; }
+    h1 span { color:var(--or); font-style:italic; font-weight:normal; font-size:1.1rem; display:block; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none;
+           font-weight:600; border:1px solid var(--or); color:var(--or); }
+    .btn.primary { background:var(--or); color:var(--nuit); }
+    .btn:focus-visible { outline:3px solid var(--ivoire); outline-offset:2px; }
+    main { max-width:1200px; margin:0 auto; padding:0 20px 24px; }
+    .viewer { width:100%; aspect-ratio:16/10; min-height:420px; border:1px solid #2a3350;
+              border-radius:10px; background:var(--obsidienne); }
+    .mobile-note { display:none; padding:16px; border:1px solid #2a3350; border-radius:10px;
+                   background:var(--obsidienne); }
+    footer { text-align:center; font-size:.85rem; opacity:.7; padding:16px; }
+    @media (max-width: 700px) {
+      .viewer { display:none; }
+      .mobile-note { display:block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ondea Commandes <span>Soutenance de la partie front-end</span></h1>
+    <div class="actions">
+      <a class="btn primary" href="presentation-front.pdf" target="_blank" rel="noopener">Ouvrir en plein écran</a>
+      <a class="btn" href="presentation-front.pdf" download>Télécharger le PDF</a>
+    </div>
+  </header>
+  <main>
+    <iframe class="viewer" src="presentation-front.pdf#view=FitH" title="Diaporama Ondea Commandes (PDF)"></iframe>
+    <p class="mobile-note">
+      Sur téléphone, le diaporama s'ouvre dans la visionneuse PDF de votre appareil :
+      utilisez le bouton <strong>« Ouvrir en plein écran »</strong> ci-dessus.
+    </p>
+  </main>
+  <footer>MODE 83 · Draguignan (Var) · Promotion 2027</footer>
+</body>
+</html>
